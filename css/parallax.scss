@@ -1,0 +1,71 @@
+.parallax-container {
+	position:relative;
+	overflow:hidden;
+	min-height:100vh;
+}
+
+.parallax-containerMain {
+	position:relative;
+	overflow:hidden;
+	min-height:475vh;
+}
+
+.parallax-containerTop {
+	position:relative;
+	overflow:hidden;
+	min-height:200vh;
+}
+
+@media screen and (max-width:1375px) {
+
+	.parallax-containerTop {min-height:175vh;}
+
+}
+
+.parallax-containerBottom {
+	position:relative;
+	overflow:hidden;
+	min-height:193vh;
+}
+
+@media screen and (max-width:1400px) {
+
+	.parallax-containerBottom {min-height:145vh;}
+
+}
+
+.parallax {
+	position:absolute;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	z-index:-1;
+}
+
+.parallax-containerMain {
+
+	> .parallax {
+		position:absolute;
+		top:0;
+		left:0;
+		right:0;
+		bottom:0;
+		z-index:-3;
+	}
+
+}
+
+.parallax img {
+	//opacity:0;
+	display:none;
+	position:absolute;
+	left:50%;
+	bottom:0;
+	min-width:100%;
+	min-height:100vh;
+	-webkit-transform:translate3d(0, 0, 0);
+	transform:translate3d(0, 0, 0);
+	-webkit-transform:translateX(-50%);
+	transform:translateX(-50%);
+}

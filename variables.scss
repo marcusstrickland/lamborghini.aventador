@@ -1,0 +1,149 @@
+@mixin html() {
+	@include gradient();
+	//overflow-x:hidden;
+	//overflow-y:scroll;
+
+	scroll-behavior: smooth;
+
+	body {background-color:transparent;overflow-x:hidden;}
+
+	@include scroll();
+
+}
+
+@mixin html-body() {
+	color:$white;
+	font-family:'Poppins-Regular';
+	font-size:100%;
+	min-height:100%;
+	margin:0;
+	padding:0;
+	-webkit-font-smoothing:antialiased;
+	-moz-font-smoothing:antialiased;
+  	//overflow-x:hidden;
+
+  	#backtotopBtn {@include backtotopBtn();}
+}
+
+
+
+
+@mixin scroll() {
+	::-webkit-scrollbar {width:3px;}
+	::-webkit-scrollbar-track {background-color:$brown;}
+	::-webkit-scrollbar-thumb {background-color:$red;}
+}
+
+
+
+
+
+
+
+@mixin centering() {position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);}
+
+
+
+
+
+
+
+
+
+/*fonts*/
+
+//Mostra Nuova Regular
+
+@mixin mostra-nuova-regular {
+	font-family: mostra-nuova, sans-serif;
+	font-weight: 400;
+	font-style: normal;
+}
+
+//Mostra Nuova Bold
+
+@mixin mostra-nuova-bold {
+	font-family: mostra-nuova, sans-serif;
+	font-weight: 700;
+	font-style: normal;
+}
+
+
+
+$transition:all .35s ease-in-out 0s;
+
+@mixin flex() {
+	display:flex;
+	align-items:center;
+	justify-content: center;
+}
+
+@mixin header1() {
+	@include mostra-nuova-regular();
+	//line-height:90px;
+}
+
+
+
+
+@mixin menu-trigger() {//padding-top:15px;padding-bottom:15px;
+
+	.menu-trigger {height:30px;cursor:pointer;width:30px;margin:30px auto;transition:$transition;
+
+		span {background-color:$red;display:block;height:3px;position:relative;transition:$transition;width:30px;
+
+			&:nth-child(1) {top:12px;}
+
+			&:nth-child(2) {top:10px;transform: rotate(90deg);}
+
+		}
+
+	}
+
+	.close-trigger {height:30px;cursor:pointer;width:30px;margin:30px auto;transform: rotate(-45deg);
+
+		span {background-color:$gold;display:block;position:relative;height:3px;width:30px;
+
+			&:nth-child(1) {top:12px;}
+
+			&:nth-child(2) {top:10px;transform: rotate(90deg);}
+
+		}
+
+	}
+
+}
+
+@mixin flexContainer {
+	display: flex;
+	align-items: center;
+	justify-content:center;
+	//min-height: !specify;
+ }
+
+@mixin flexObject {
+	margin: 0 auto;
+	display: block;
+	//width:!specify;
+}
+
+
+
+
+@mixin headers1() {
+	color:white;
+	font-family:'Poppins-Bold';
+	letter-spacing:-.075em;
+	text-transform:uppercase;
+}
+
+
+
+
+@mixin headers2() {//font-size:5em;
+	color:white;
+	font-family:'Poppins-Regular';
+	//letter-spacing:.1em;
+	letter-spacing:.075em;
+	text-transform:uppercase;
+}

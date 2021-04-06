@@ -1,0 +1,298 @@
+/*
+Template Name: Lamborghini Aventador
+*/
+
+
+
+
+
+
+
+/*imports*/
+@import "oswald/fonts";
+
+@import "colors";
+@import "variables";
+
+//resources
+@import "css/backtotopBtn";
+@import "css/bootstrap";
+//@import "css/ghpages-materialize";
+@import "css/parallax";
+
+
+//fonts
+@import "montserrat/fonts";
+@import "walfork/fonts";
+
+
+
+
+
+
+
+/*gradient
+
+#060107
+#25191b
+#312927
+#524646
+#6a544e
+#78645f
+
+*/
+
+
+
+
+
+
+
+/*colors
+
+#231d1d
+rgba(35,29,29,1)
+
+#d0d1cb
+rgba(208,209,203,1)
+
+#797473
+rgba(121,116,115,1)
+
+#fff
+
+#cc0b07
+rgba(204,11,7,1)
+
+#fdc74f
+rgba(253,199,79,1)
+
+*/
+
+
+
+
+
+
+
+html {@include html();}
+
+html,
+body {@include html-body();
+
+
+
+
+
+
+
+	a:link,
+	a:visited,
+	a:active {color:$gold;text-decoration:none;transition:all .35s ease-in-out 0s;
+
+		&:hover {color:$white;opacity:.85;}
+
+	}
+
+
+
+
+
+
+
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {color:$gray;font-family: 'montserratregular';letter-spacing:.2em;text-transform:uppercase;}
+
+
+
+
+
+
+
+	#pagination {background:$brown;border-radius:0 3px 3px 0;padding:10px;position:fixed;top:50%;left:0;transform:translate(0,-50%);z-index:99999;//padding-left:10px;width:5px;
+
+		.nav {
+
+			ul.menu,
+			ul.menu li {margin:0;padding:0;}
+
+			ul.menu {
+
+				li {display:block;list-style:none;margin-bottom:5px;
+
+					&:last-child {margin-bottom:0;}
+
+					//&:last-child {margin-bottom:0;}
+
+					a {background-color:$red;border:0;height:120px;padding:0;width:10px;}
+
+					a.active {background-color:$white;width:15px;}
+
+				}
+
+			}
+
+		}
+
+	}
+
+
+
+
+
+
+
+	#navigation.primary-nav {@include gradient();transition:$transition;box-shadow:1px 2px 3px 2px rgba(0,0,0,.1);line-height:80px;min-height:80px;position:fixed;width:100%;z-index:999;
+
+		.nav {padding-top:0;padding-bottom:0;
+
+			.menu-primary-menu-links-container {width:100%;
+
+				ul.menu,
+				ul.menu li {margin:0;padding:0;}
+
+				ul.menu {
+
+					li {background:transparent;border:0;display:block;float:left;width:20%;
+
+						a {background:transparent;border:0;font-family: 'Poppins-Bold';font-size:.75em;letter-spacing:.075em;line-height:80px;text-transform:uppercase;display:block;text-align:center;//align-items:center;justify-content:center;
+
+							img {height:70px;}
+
+							hr {border-bottom:1px solid $gold;width:0;margin:0 auto;opacity:0;transition:$transition;}
+
+							&:hover {background-color:rgba(0,0,0,.3);color:$gold;hr {opacity:1;width:50px;}}
+
+						}
+
+						a.active {background-color:rgba(0,0,0,.4);color:$red;hr {border-bottom:1px solid $red;width:50px;opacity:1;}}
+
+					}
+
+				}
+
+			}
+
+		}
+
+	}
+
+
+
+
+
+
+
+	/*tooltips*/
+			
+	.tooltip-custom {position:relative;z-index:999;
+
+		span {display:none;}
+
+		&:hover > span {
+			background-color:#231d1d;
+			color:#cc0b07;
+			display:block;
+			font-family: 'montserratregular';
+			font-size:.85em;
+			padding:3px;
+			position:absolute;
+			top:-7px;
+			left:35px;
+			text-align:center;
+			text-transform:uppercase;
+			width:150px;
+		}
+
+	}
+
+
+
+
+
+
+
+	.panel {min-height:75vh;}
+
+
+
+
+
+
+
+	#content {@include gradient();box-shadow:1px 2px 3px 2px rgba(0,0,0,.2);min-height:25vh;padding-top:15px;padding-bottom:15px;
+
+		a {background-color:transparent;display:block;width:100%;}
+
+		hr {border-color:#d0d1cb;;}
+
+		p {color:$white;font-family: 'oswaldlight';font-size:1em;letter-spacing:.075em;line-height:25px;
+
+			img {float:left;margin:0 15px 15px 0;width:45%;}
+
+		}
+
+		.body-chasis-label,
+		.body-chasis-detail {background-color:rgba(35,29,29,.25);border-bottom:1px dotted #231d1d;height:15vh;
+		}
+
+		.body-chasis-label {color:#d0d1cb;font-family: 'montserratregular';letter-spacing:.2em;line-height:15vh;text-transform:uppercase;}
+
+		.body-chasis-detail {color:#fff;display:flex;align-items:center;min-height:5vh;}
+
+		@media screen and (max-width:767px) {
+
+			.body-chasis-label,
+			.body-chasis-detail {text-align:center;}
+
+			.body-chasis-label {border-bottom:none;}
+
+			.body-chasis-detail {border-top:none;border-bottom:1px dotted #231d1d;}
+
+		}
+
+		h5.buy-btn {background-color:#fdc74f;border:1px solid #fdc74f;text-align:center;margin:5vh auto;width:30%;
+
+			a {color:$brown;height:60px;display:flex;align-items:center;justify-content:center;}
+
+		}
+
+	}
+
+
+
+
+
+
+
+	.parallax-container {height:70vh;
+
+		a {display:block;}
+
+	}
+
+	#footer {
+
+		h6 {font-family: 'Walfork-Regular';letter-spacing:normal;text-align:center;text-transform:capitalize;}
+
+	}
+
+
+
+
+
+
+
+
+}
+
+@media screen and (max-width:767px) {
+
+	html,body {font-size:85%;}
+
+}
